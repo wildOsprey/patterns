@@ -1,7 +1,4 @@
 class OldCoffeeMachine():
-    def __init__(self):
-        pass
-
     def selectA(self, *args, **kwargs):
         print('Running first selection: Old Machine')
 
@@ -10,9 +7,6 @@ class OldCoffeeMachine():
 
 
 class CoffeeMachineInterface():
-    def __init__(self):
-        pass
-
     def chooseFirstSelection(self, *args, **kwargs):
         raise NotImplementedError()
 
