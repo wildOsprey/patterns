@@ -15,8 +15,8 @@ class CoffeeMachineInterface():
 
 
 class CoffeeTouchscreenAdapter(CoffeeMachineInterface):
-    def __init__(self):
-        self.__old_machine = OldCoffeeMachine()
+    def __init__(self, old_machine):
+        self.__old_machine = old_machine
 
     def chooseFirstSelection(self, *args, **kwargs):
         self.__old_machine.selectA()
@@ -25,7 +25,8 @@ class CoffeeTouchscreenAdapter(CoffeeMachineInterface):
         self.__old_machine.selectB()
 
 
-adapter = CoffeeTouchscreenAdapter()
+old_machine = OldCoffeeMachine()
+adapter = CoffeeTouchscreenAdapter(old_machine)
 
 adapter.chooseFirstSelection()
 adapter.chooseSecondSelection()
